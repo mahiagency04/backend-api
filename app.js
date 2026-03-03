@@ -19,14 +19,21 @@ const __dirname = path.dirname(__filename);
 //   credentials: true
 // }));
 
+// app.use(cors({
+//   origin: true,
+//   credentials: true
+// }));
+ 
 app.use(cors({
-  origin: true,
+  origin: [
+    "https://www.mahiagency.in",
+    "https://mahiagency.in"
+  ],
   credentials: true
 }));
 
+
 // console.log("JWT_SECRET_KEY =", process.env.JWT_SECRET_KEY);
-
-
 
 mongoose.connect("mongodb+srv://mahiagency04_db_user:ciRWzrad3jILoJmj@mahiagency.w4xesys.mongodb.net/", {
     dbName: "Mahi_Agency"
