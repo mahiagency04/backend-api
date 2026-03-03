@@ -24,14 +24,22 @@ const __dirname = path.dirname(__filename);
 //   credentials: true
 // }));
  
+// app.use(cors({
+//   origin: [
+//     "https://www.mahiagency.in",
+//     "https://mahiagency.in"
+//   ],
+//   credentials: true
+// }));
+
 app.use(cors({
   origin: [
+    "http://localhost:5173",
     "https://www.mahiagency.in",
     "https://mahiagency.in"
   ],
   credentials: true
 }));
-
 
 // console.log("JWT_SECRET_KEY =", process.env.JWT_SECRET_KEY);
 
